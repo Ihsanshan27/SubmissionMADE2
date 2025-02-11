@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">SubmissionMADE</string>
+
+    <string name="titleHome">Home</string>
+    <string name="titleUpcoming">Upcoming</string>
+    <string name="titleFinished">Finished</string>
+    <string name="titleSearch">Search</string>
+    <string name="titleFavorite">Favorite</string>
+    <string name="titleSetting">Settings</string>
+
+    <string name="imageCover">Image Cover</string>
+    <string name="name">Name</string>
+    <string name="quota">Sisa Kuota: %1$d</string>
+    <string name="summary">Summary</string>
+    <string name="description">Description</string>
+    <string name="register">Register</string>
+    <string name="searchbarHint">Search Hint</string>
+    <string name="beginTime">Tanggal</string>
+    <string name="ownerName">ownerName</string>
+    <string name="cityName">cityName</string>
+
+    <string name="noFavorite">Kamu belum memiliki event yang favorite</string>
+    <string name="eventsUnavailable">Event belum tersedia</string>
+
+    <string name="image_description">Image</string>
+    <string name="text_primary">Sample of title text</string>
+    <string name="text_subtitle">Sample of subtitle text</string>
+    <string name="title_favorite">favorite</string>
+    <string name="detail_event">Detail Event</string>
+
+</resources>
