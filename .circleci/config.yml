@@ -1,11 +1,11 @@
 version: 2.1
- 
+
 orbs:
   android: circleci/android@2.5.0
- 
+
 jobs:
   build:
-    executor: 
+    executor:
       name: android/android-machine
       resource-class: large
       tag: default
