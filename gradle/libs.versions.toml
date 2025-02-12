@@ -33,6 +33,7 @@ recyclerview = "1.4.0"
 androidDatabaseSqlcipher = "4.5.4"
 sqliteKtx = "2.4.0"
 lottie = "6.4.1"
+kover = "0.7.4"
 
 
 [libraries]
@@ -76,3 +77,4 @@ jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = 
 android-library = { id = "com.android.library", version.ref = "agp" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 android-dynamic-feature = { id = "com.android.dynamic-feature", version.ref = "agp" }
+kotlinx-kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
