@@ -27,5 +27,6 @@
     <string name="text_subtitle">Sample of subtitle text</string>
     <string name="title_favorite">favorite</string>
     <string name="detail_event">Detail Event</string>
+    <string name="event_not_found">Event not found</string>
 
 </resources>

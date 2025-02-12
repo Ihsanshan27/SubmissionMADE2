@@ -56,8 +56,9 @@ class HomeFragment : Fragment() {
                 when (state) {
                     is ResultState.Loading -> showLoading1(true)
                     is ResultState.Success -> {
-                        showLoading1(false)
                         setupUpcomingEvents(state.data)
+                        showLoading1(false)
+                        showMessage(state.data.isEmpty())
                     }
 
                     is ResultState.Error -> {
@@ -79,6 +80,7 @@ class HomeFragment : Fragment() {
                     is ResultState.Success -> {
                         showLoading2(false)
                         setupFinishedEvents(state.data)
+                        showMessage(state.data.isEmpty())
                     }
 
                     is ResultState.Error -> {
@@ -97,6 +99,18 @@ class HomeFragment : Fragment() {
         }
         if (homeViewModel.listFinishedEvents.value !is ResultState.Success) {
             homeViewModel.getFinishedEvents()
+        }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        _binding = null
+    }
+
+    private fun showMessage(isEmpty: Boolean) {
+        binding.tvInfo.apply {
+            visibility = if (isEmpty) View.VISIBLE else View.GONE
+            if (isEmpty) playAnimation() else cancelAnimation()
         }
     }
 

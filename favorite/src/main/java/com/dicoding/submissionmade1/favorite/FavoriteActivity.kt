@@ -76,8 +76,12 @@ class FavoriteActivity : AppCompatActivity() {
     }
 
     private fun showNoFavoriteMessage(isEmpty: Boolean) {
-        binding.tvInfo.visibility = if (isEmpty) View.VISIBLE else View.GONE
+        binding.tvInfo.apply {
+            visibility = if (isEmpty) View.VISIBLE else View.GONE
+            if (isEmpty) playAnimation() else cancelAnimation()
+        }
     }
+
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressedDispatcher.onBackPressed()

@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.dicoding.submissionmade1.core.domain.model.Events
 import com.dicoding.submissionmade1.databinding.ItemVerticalBinding
 import com.dicoding.submissionmade1.ui.detail.DetailActivity
+import com.dicoding.submissionmade1.ui.loadImage
 
 class EventsAdapter : ListAdapter<Events, EventsAdapter.ViewHolder>(DIFF_CALLBACK) {
 

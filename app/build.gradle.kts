@@ -19,7 +19,14 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+        debug {
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -66,6 +73,10 @@ dependencies {
     implementation(libs.androidx.work.runtime)
 
     implementation(libs.koin.android)
+
+    debugImplementation(libs.leakcanary.android)
+
+    implementation(libs.lottie)
 
     //Module
     implementation(project(":core"))

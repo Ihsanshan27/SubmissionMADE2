@@ -37,6 +37,7 @@ class UpcomingFragment : Fragment() {
                     is ResultState.Success -> {
                         setupUpcomingEvents(state.data)
                         showLoading(false)
+                        showMessage(state.data.isEmpty())
                     }
 
                     is ResultState.Error -> {
@@ -60,6 +61,13 @@ class UpcomingFragment : Fragment() {
         super.onResume()
         if (upcomingViewModel.listUpcomingEvents.value !is ResultState.Success) {
             upcomingViewModel.getupComingEvents()
+        }
+    }
+
+    private fun showMessage(isEmpty: Boolean) {
+        binding.tvInfo.apply {
+            visibility = if (isEmpty) View.VISIBLE else View.GONE
+            if (isEmpty) playAnimation() else cancelAnimation()
         }
     }
 

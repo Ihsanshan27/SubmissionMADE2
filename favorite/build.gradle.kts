@@ -44,4 +44,5 @@ dependencies {
     api(libs.androidx.legacy.support.v4)
     api(libs.glide)
     api(libs.koin.android)
+    implementation(libs.lottie)
 }
