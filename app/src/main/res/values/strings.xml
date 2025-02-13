@@ -28,5 +28,6 @@
     <string name="title_favorite">favorite</string>
     <string name="detail_event">Detail Event</string>
     <string name="event_not_found">Event not found</string>
+    <string name="btn_favorite">btn_favorite</string>
 
 </resources>
