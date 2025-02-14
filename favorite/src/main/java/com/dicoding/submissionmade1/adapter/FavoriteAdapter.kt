@@ -29,13 +29,13 @@ class FavoriteAdapter : ListAdapter<Favorite, FavoriteAdapter.ViewHolder>(DIFF_C
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoriteAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding =
             ItemVerticalBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: FavoriteAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val events = getItem(position)
         holder.bind(events)
     }

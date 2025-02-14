@@ -14,7 +14,7 @@ val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "Se
 class SettingsPreferences(private val dataStore: DataStore<Preferences>) {
     fun getThemeSetting(): Flow<Boolean> {
         return dataStore.data.map { preferences ->
-            preferences[THEME_KEY] ?: false
+            preferences[THEME_KEY] == true
         }
     }
 
@@ -26,7 +26,7 @@ class SettingsPreferences(private val dataStore: DataStore<Preferences>) {
 
     fun getNotificationSetting(): Flow<Boolean> {
         return dataStore.data.map { preferences ->
-            preferences[NOTIFICATION_KEY] ?: false
+            preferences[NOTIFICATION_KEY] == true
         }
     }
 
